@@ -1,9 +1,11 @@
 import * as React from "react";
+import { Header } from "./";
 
-export const App = () => {
+export const App: React.SFC<any> = ({ Welcome }) => {
     return (
         <div>
-            Hello I am an App
+            <Header />
+            { Welcome }
         </div>
     )
 }
