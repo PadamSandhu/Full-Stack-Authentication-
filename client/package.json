@@ -5,8 +5,6 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/react-redux": "^6.0.0",
-    "@types/redux-form": "^7.2.5",
-    "@types/redux-thunk": "^2.1.0",
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "babel-jest": "^22.1.0",
@@ -34,6 +32,7 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
+    "redux-actions": "^2.4.0",
     "redux-form": "^7.3.0",
     "redux-thunk": "^2.3.0",
     "resolve": "1.6.0",
@@ -64,6 +63,9 @@
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
     "@types/react-router-dom": "^4.2.6",
+    "@types/redux-actions": "^2.3.0",
+    "@types/redux-form": "^7.2.5",
+    "@types/redux-thunk": "^2.1.0",
     "typescript": "^2.8.3"
   },
   "jest": {
