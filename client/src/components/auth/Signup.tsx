@@ -8,10 +8,13 @@ import { signup } from "../../store";
 
 interface Props {
   signup?: any
+  errorMessage?:string
+  state?:any
 }
  export class SignupComp extends React.Component<Props & InjectedFormProps<IformProps>> {
     
   public onSubmit = (formProps: IformProps) => {
+    console.log(this.props.state);
     this.props.signup(formProps)
   };
 
@@ -39,6 +42,9 @@ interface Props {
                   autoComplete= "none"
                 />
             </fieldset>
+            <div>
+              {this.props.errorMessage}
+            </div>
             <button>Sign up!</button>
         </form>
       </div>
@@ -46,11 +52,17 @@ interface Props {
   }
 }
 
+function mapStateToProps(state:any) {
+  return { errorMessage: state.authenticationError,
+           state
+        }
+}
+
 function mapDispatchToProps(dispatch:any) {
   return bindActionCreators({ signup }, dispatch);
 }
 
 export const Signup = compose (      // Inside compose we can pass as many Higher order components which we want
-  connect(null,mapDispatchToProps),                     // First Higher order component which I want to apply to SignupComp
+  connect(mapStateToProps,mapDispatchToProps),     // First Higher order component which I want to apply to SignupComp
   reduxForm({ form: "signup" }) //  Second Higher order function being applied 
 )(SignupComp)
