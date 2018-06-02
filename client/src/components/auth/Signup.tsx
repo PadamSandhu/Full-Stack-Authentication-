@@ -10,12 +10,14 @@ interface Props {
   signup?: any
   errorMessage?:string
   state?:any
+  history?:any
 }
  export class SignupComp extends React.Component<Props & InjectedFormProps<IformProps>> {
     
-  public onSubmit = (formProps: IformProps) => {
-    console.log(this.props.state);
-    this.props.signup(formProps)
+  public onSubmit = (formProps: IformProps) => {  
+    this.props.signup(formProps, () => {        // Callback Function added to the Signup!
+      this.props.history.push("/feature");
+    });
   };
 
     public render() {
