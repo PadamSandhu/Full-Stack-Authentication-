@@ -1,6 +1,7 @@
 import * as React from "react";
+import requireAuth from "./requireAuth";
 
-export class Feature extends React.Component {
+ class FeatureClass extends React.Component {
     public render() {
         return (
             <div>
@@ -9,3 +10,5 @@ export class Feature extends React.Component {
         );
     }
 }
+
+export const Feature = requireAuth(FeatureClass);

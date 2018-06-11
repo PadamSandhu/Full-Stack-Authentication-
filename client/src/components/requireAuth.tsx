@@ -26,7 +26,7 @@ export default (ChildComponent:any) => {     // Interface <Props, state>
     }
   }
   function mapStateToProps(state:any) {
-    return { auth: state.auth };
+    return { auth: state.authentication };
   }
   return connect(mapStateToProps)(ComposedComponent);
 };
