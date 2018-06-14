@@ -55,7 +55,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "jest": "jest"
   },
   "devDependencies": {
     "@types/jest": "^22.2.3",
@@ -66,14 +67,22 @@
     "@types/redux-actions": "^2.3.0",
     "@types/redux-form": "^7.2.5",
     "@types/redux-thunk": "^2.1.0",
-    "typescript": "^2.8.3"
+    "@types/enzyme": "^3.1.9",
+    "@types/fetch-mock": "^5.12.2",
+    "@types/redux-mock-store": "0.0.13",
+    "typescript": "^2.8.3",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "fetch-mock": "^6.0.1"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}"
     ],
     "setupFiles": [
-      "<rootDir>/config/polyfills.js"
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/jest/test-shim.js",
+      "<rootDir>/config/jest/test-setup.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.(j|t)s?(x)",
