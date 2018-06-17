@@ -1,0 +1,32 @@
+{
+    "users" : [
+        {
+            "id":"1",
+            "firstName": "John",
+            "lastName":"Doe",
+            "email":"abc@abc.com",
+            "age": 31,
+            "CompanyId": "1"
+        },
+        {
+            "id":"2",
+            "firstName": "Mark",
+            "lastName":"Twin",
+            "email":"abcd@abc.com",
+            "age": 33,
+            "CompanyId": "2"
+        }
+    ],
+    "companies": [
+        {
+            "id": "1",
+            "name": "Apple",
+            "description": "This is app you can do anything"
+        },
+        {
+            "id": "2",
+            "name": "Microsoft",
+            "description": "This is Microsoft you can do anything"
+        }
+    ]
+}
